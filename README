@@ -1,0 +1,54 @@
+#_____________________________________________________________________
+# Title     : self_self_search.pl
+# Usage     : self_self_search.pl <FASTA_db.fa> [o c s m r]
+# Function  : self_to_self input database search. This matches all the
+#              sequences to others in the given database(sequence)
+#              Default search program is 'fasta'. You can specify it
+#              to ssearch by using 'a=ssearch' prompt option.
+#             It will produce 2 char size subdirectories. In them, you will
+#              get search results stored in MSP (matching sequence pair)
+#              file format.
+# Example   : self_self_search.pl PDB_db.fa
+# Keywords  : self_to_self_db_search, self self search, database search
+# Options   :
+#             DB=   for target DB  "DB=MY_FASTA.fa"
+#             File= to get file base(root) name.  "File=TARGET_DB.fa"
+#             m  for MSP format directly from FASTA or Ssearch result than through sso_to_msp to save mem
+#             s  for the big single output (msp file output I mean)
+#             o  for overwrite existing xxxx.fa files for search
+#             c  for create SSO file (sequence search out file)
+#             r  for reversing the protein sequence !!
+#             R  for attaching ranges of sequences
+#             k= for k-tuple value. default is 1 (ori. FASTA prog. default is 2)
+#             u= for $upper_expect_limit  ## The higher the slower
+#             l= for $lower_expect_limit
+#             a= for choosing either fasta or ssearch algorithm
+#             d= for defining the size of subdir made. 2 means it creates
+#                    eg, DE while 1 makes D
+#             d  for $make_gz_in_sub_dir_opt, putting resultant sso files in gz format and in single char subdir
+#             D  for $make_msp_in_sub_dir_opt, convert sso to msp and put in sub dir like /D/, /S/
+#             n  for new format (msp2 format)
+#
+#  $over_write     = o by o -o
+#  $create_sso     = c by c -c
+#  $single_big_msp = s by s -s
+#  $msp_directly_opt = m by m -m
+#  $reverse_query    =r by r -r
+#  $upper_expect_limit = by u=
+#  $machine_readable = M by M -M
+#  $do_in_batch = b by b -b
+#  $make_msp_in_sub_dir_opt = D by D -D
+#  $make_gz_in_sub_dir_opt = d by d -d
+#  $new_format=n by n -n
+#  $sub_dir_size= by d=
+#  $add_range=R by R -R
+#
+# Returns   :
+# Argument  :
+# Version   : 1.3
+#-----------------------------------------------------------------------------------
+
+
+ftp site:   ftp.mrc-lmb.cam.ac.uk  /pub/genomes/Software/Self_self_search
+
+
